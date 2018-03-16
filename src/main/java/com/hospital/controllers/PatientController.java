@@ -32,19 +32,17 @@ public class PatientController {
     @ResponseStatus(HttpStatus.CREATED )
     @RequestMapping(method = RequestMethod.POST)
     public void save(@RequestBody Patient patient) {
-        System.out.println(patient);
-
         patientService.save(patient);
     }
 
     @CrossOrigin
     @RequestMapping(method = RequestMethod.PUT)
-    public void update(Patient patient) {
+    public void update(@RequestBody Patient patient) {
         patientService.save(patient);
     }
 
     @CrossOrigin
-    @RequestMapping(method = RequestMethod.DELETE)
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable long id) {
         patientService.delete(id);
     }

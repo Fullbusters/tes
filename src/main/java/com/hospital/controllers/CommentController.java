@@ -27,14 +27,14 @@ public class CommentController {
 
     @CrossOrigin
     @RequestMapping(value = "/{id}/comments/{commentId}",method = RequestMethod.GET)
-    public Comment getOne(@PathVariable long id){
-        return commentService.findOne(id);
+    public Comment getOne(@PathVariable long commentId){
+        return commentService.findOne(commentId);
     }
 
     @CrossOrigin
     @ResponseStatus(HttpStatus.CREATED )
     @RequestMapping(value = "/{id}/comments", method = RequestMethod.POST)
-    public void save(Comment comment) {
+    public void save(@RequestBody Comment comment) {
         Date currentDate = new Date();
         if(comment.getCreationDate()==null){
             comment.setCreationDate(currentDate);
@@ -43,9 +43,8 @@ public class CommentController {
     }
 
     @CrossOrigin
-    @RequestMapping(value = "/{id}/comments/{commentId}", method = RequestMethod.PUT)
-    public void update(@PathVariable long commentId,Comment comment) {
-        comment.setCommentId(commentId);
+    @RequestMapping(value = "/{id}/comments", method = RequestMethod.PUT)
+    public void update(@RequestBody Comment comment) {
         commentService.save(comment);
     }
 
