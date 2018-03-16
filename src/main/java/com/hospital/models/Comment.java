@@ -25,6 +25,12 @@ public class Comment {
     public Comment() {
     }
 
+    public Comment(Date creationDate, String commentContent, Patient patient) {
+        this.creationDate = creationDate;
+        this.commentContent = commentContent;
+        this.patient = patient;
+    }
+
     public Long getCommentId() {
         return commentId;
     }

@@ -114,18 +114,4 @@ public class Patient {
         this.comments = comments;
     }
 
-    @Override
-    public String toString() {
-        return "Patient{" +
-                "patientId=" + patientId +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", sex='" + sex + '\'' +
-                ", country='" + country + '\'' +
-                ", state='" + state + '\'' +
-                ", address='" + address + '\'' +
-                ", comments=" + comments +
-                '}';
     }
-}
