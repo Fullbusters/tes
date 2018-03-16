@@ -14,9 +14,9 @@ public class CommentService {
     @Autowired
     private CommentRepository commentRepository;
 
-//    public List<Comment> findByPatientId(Long patientId){
-//        return commentRepository.findByPatientId(patientId);
-//    }
+    public List<Comment> findByPatientPatientId(Long patientId){
+        return commentRepository.findByPatient_PatientId(patientId);
+    }
     public Comment findOne(Long id){
         return commentRepository.findOne(id);
     }
@@ -25,6 +25,9 @@ public class CommentService {
     }
     public void delete(Long Id){
         commentRepository.delete(Id);
+    }
+    public List<Comment> findAll(){
+        return  commentRepository.findAll();
     }
 
 }

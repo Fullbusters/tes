@@ -19,11 +19,17 @@ public class CommentController {
     @Autowired
     private CommentService commentService;
 
-    //TODO зробити вивід всіх коментарів за id пацієнта
-//    @RequestMapping(value = "/{id}/comments", method = RequestMethod.GET)
-//    public List<Comment> getList(@PathVariable long id){
-//        return commentService.findByPatientId(id);
-//    }
+    @CrossOrigin
+    @RequestMapping(value = "/comments", method = RequestMethod.GET)
+    public List<Comment> getAll(){
+        return commentService.findAll();
+    }
+
+    @CrossOrigin
+    @RequestMapping(value = "/{id}/comments", method = RequestMethod.GET)
+    public List<Comment> getList(@PathVariable long id){
+        return commentService.findByPatientPatientId(id);
+    }
 
     @CrossOrigin
     @RequestMapping(value = "/{id}/comments/{commentId}",method = RequestMethod.GET)
