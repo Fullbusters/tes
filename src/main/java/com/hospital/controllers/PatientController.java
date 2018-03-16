@@ -16,27 +16,34 @@ public class PatientController {
     @Autowired
     private PatientService patientService;
 
+    @CrossOrigin
     @RequestMapping
     public List<Patient> getList(){
         return patientService.findAll();
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/{id}",method =RequestMethod.GET)
     public Patient getById(@PathVariable long id){
         return patientService.findOne(id);
     }
 
+    @CrossOrigin
     @ResponseStatus(HttpStatus.CREATED )
     @RequestMapping(method = RequestMethod.POST)
-    public void save(Patient patient) {
+    public void save(@RequestBody Patient patient) {
+        System.out.println(patient);
+
         patientService.save(patient);
     }
 
+    @CrossOrigin
     @RequestMapping(method = RequestMethod.PUT)
     public void update(Patient patient) {
         patientService.save(patient);
     }
 
+    @CrossOrigin
     @RequestMapping(method = RequestMethod.DELETE)
     public void delete(@PathVariable long id) {
         patientService.delete(id);

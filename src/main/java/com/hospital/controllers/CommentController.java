@@ -25,11 +25,13 @@ public class CommentController {
 //        return commentService.findByPatientId(id);
 //    }
 
+    @CrossOrigin
     @RequestMapping(value = "/{id}/comments/{commentId}",method = RequestMethod.GET)
     public Comment getOne(@PathVariable long id){
         return commentService.findOne(id);
     }
 
+    @CrossOrigin
     @ResponseStatus(HttpStatus.CREATED )
     @RequestMapping(value = "/{id}/comments", method = RequestMethod.POST)
     public void save(Comment comment) {
@@ -40,12 +42,14 @@ public class CommentController {
         commentService.save(comment);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/{id}/comments/{commentId}", method = RequestMethod.PUT)
     public void update(@PathVariable long commentId,Comment comment) {
         comment.setCommentId(commentId);
         commentService.save(comment);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/{id}/comments/{commentId}", method = RequestMethod.DELETE)
     public void delete(@PathVariable long commentId) {
         commentService.delete(commentId);
