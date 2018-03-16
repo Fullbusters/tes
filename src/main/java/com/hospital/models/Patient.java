@@ -1,6 +1,8 @@
 package com.hospital.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -27,7 +29,7 @@ public class Patient {
     @Column(name="Address")
     private String address;
     @OneToMany( cascade = CascadeType.ALL,mappedBy = "patient")
-     private List<Comment> comments;
+     private @JsonIgnore List<Comment> comments;
 
     public Patient() {
     }
