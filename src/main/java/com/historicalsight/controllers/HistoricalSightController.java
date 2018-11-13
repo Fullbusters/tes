@@ -1,4 +1,4 @@
-package historicalsight.controllers;
+package com.historicalsight.controllers;
 
 import com.historicalsight.models.HistoricalSight;
 import com.historicalsight.services.HistoricalSightService;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/historicalsight")
+@RequestMapping("/api/com.historicalsight")
 public class HistoricalSightController {
 
     @Autowired

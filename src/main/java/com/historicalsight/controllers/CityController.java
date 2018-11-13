@@ -1,4 +1,4 @@
-package historicalsight.controllers;
+package com.historicalsight.controllers;
 
 
 import com.historicalsight.models.City;
@@ -33,7 +33,7 @@ public class CityController {
     }
 
     @CrossOrigin
-    @RequestMapping(value = "/{id}/historicalsight",method = RequestMethod.GET)
+    @RequestMapping(value = "/{id}/com.historicalsight",method = RequestMethod.GET)
     public List<HistoricalSight> getHistoricalSightByCityId(@PathVariable long id){
         return historicalSightService.getHistoricalSight(id);
     }

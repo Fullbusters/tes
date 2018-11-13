@@ -1,4 +1,4 @@
-package historicalsight.models;
+package com.historicalsight.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

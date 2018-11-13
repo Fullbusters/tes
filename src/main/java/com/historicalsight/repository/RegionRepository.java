@@ -1,4 +1,4 @@
-package historicalsight.repository;
+package com.historicalsight.repository;
 
 import com.historicalsight.models.Region;
 import org.springframework.data.jpa.repository.JpaRepository;

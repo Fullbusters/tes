@@ -1,4 +1,4 @@
-package historicalsight.services;
+package com.historicalsight.services;
 
 import com.historicalsight.models.Info;
 import com.historicalsight.repository.InfoRepository;

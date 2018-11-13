@@ -1,4 +1,4 @@
-package historicalsight;
+package com.historicalsight;
 
 
 import org.springframework.boot.SpringApplication;

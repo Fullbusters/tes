@@ -1,4 +1,4 @@
-package historicalsight.controllers;
+package com.historicalsight.controllers;
 
 import com.historicalsight.models.Info;
 import com.historicalsight.services.InfoService;
